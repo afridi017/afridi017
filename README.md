@@ -89,7 +89,7 @@ Reach me at:  ib.afridi.cs@gmail.com
 **📱 Mobile, Tools & Deployment**
 
 <img src="https://skillicons.dev/icons?i=git,github,vscode,netlify&theme=dark" />
-![Capacitor](https://img.shields.io/badge/Capacitor-119EFF?style=for-the-badge&logo=capacitorjs&logoColor=white)
+<img src="https://img.shields.io/badge/Capacitor-119EFF?style=for-the-badge&logo=capacitor&logoColor=white"/>
 
 </div>
 
@@ -205,7 +205,7 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 </div>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/afridi017/afridi017/output/dist/github-contribution-grid-snake-dark.svg" width="100%" />
+  <img src="https://raw.githubusercontent.com/afridi017/afridi017/output/github-contribution-grid-snake-dark.svg" width="100%" />
 </div>
 
 ---
