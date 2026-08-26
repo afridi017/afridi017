@@ -155,5 +155,4 @@ Buy Me A Coffee
 </div>
 <div align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22D3EE,100:7B2FF7&height=120&section=footer&text=Thanks%20for%20Visiting!&fontSize=22&fontColor=FFFFFF&animation=fadeIn"/>
 © 2026 IB Afridi — Built with security, code & 3D in Peshawar, Pakistan 🇵🇰
-
 </div>
