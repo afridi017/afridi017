@@ -212,6 +212,7 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
+1. ❗ Opened issue [#1](https://github.com/afridi017/surprise-for-noor/issues/1) in [afridi017/surprise-for-noor](https://github.com/afridi017/surprise-for-noor)
 <!--END_SECTION:activity-->
 
 ---
