@@ -220,6 +220,7 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ✍️ Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [MY CV](https://medium.com/@afridi017/my-cv-6332b65e6a7c?source=rss-df683669ccd2------2)
 <!-- BLOG-POST-LIST:END -->
 
 ---
