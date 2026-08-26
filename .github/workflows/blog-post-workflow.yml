@@ -19,5 +19,5 @@ jobs:
       - uses: gautamkrishnar/blog-post-workflow@master
         with:
           comment_tag_name: "BLOG-POST-LIST"
-          feed_list: "https://dev.to/feed/afridi017,https://medium.com/feed/@afridi017"
+          feed_list: "https://medium.com/feed/@afridi017"
           max_post_count: 5
