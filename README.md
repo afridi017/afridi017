@@ -136,7 +136,9 @@ WhatsApp AI Bot — Node.js + Levanter + OpenRouter API, powered by "IB Afridi" 
 ⚡ Latest Activity
 <!--START_SECTION:activity--><!--END_SECTION:activity-->
 ✍️ Latest Blog Posts
-<!-- BLOG-POST-LIST:START --><!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->
+- [MY CV](https://medium.com/@afridi017/my-cv-6332b65e6a7c?source=rss-df683669ccd2------2)
+<!-- BLOG-POST-LIST:END -->
 🤝 Connect With Me — Let's Build Something Secure
 <div align="center">
 Email
