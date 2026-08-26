@@ -89,7 +89,7 @@ Reach me at:  ib.afridi.cs@gmail.com
 **📱 Mobile, Tools & Deployment**
 
 <img src="https://skillicons.dev/icons?i=git,github,vscode,netlify&theme=dark" />
-<img src="https://img.shields.io/badge/Capacitor-119EFF?style=for-the-badge&logo=capacitor&logoColor=white"/>
+<img src="https://img.shields.io/badge/Capacitor-119EFF?style=for-the-badge&logo=capacitorjs&logoColor=white"/>
 
 </div>
 
@@ -213,7 +213,6 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
-1. ❗ Opened issue [#1](https://github.com/afridi017/surprise-for-noor/issues/1) in [afridi017/surprise-for-noor](https://github.com/afridi017/surprise-for-noor)
 <!--END_SECTION:activity-->
 
 ---
