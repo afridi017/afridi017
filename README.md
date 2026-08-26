@@ -25,7 +25,7 @@
 
 <div align="center">
 
-  ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&pause=1000&color=7B2FF7&center=true&vCenter=true&width=750&lines=Building+13-Module+Pentest+Framework+(IAPF);Recon+%2B+OSINT+Toolkit+Developer;Three.js+%2B+React+Three+Fiber+Explorer;Turning+Security+Ideas+Into+Real+Tools;Ethical+Hacking+is+Not+a+Crime%2C+It's+a+Skill)
+  ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&pause=1000&color=7B2FF7&center=true&vCenter=true&width=750&lines=Expanding+13-Module+Pentest+Framework+(IAPF);Recon+%2B+OSINT+Toolkit+Developer;Three.js+%2B+React+Three+Fiber+Explorer;Turning+Security+Ideas+Into+Real+Tools;Ethical+Hacking+is+Not+a+Crime%2C+It's+a+Skill)
 
   <img src="https://i.ibb.co/mVkj8JHk/IMG-20260423-WA0122.jpg" width="180" style="border-radius:50%; border:5px solid #7B2FF7; box-shadow: 0 0 30px rgba(123,47,247,0.6);" />
 
@@ -50,14 +50,15 @@ I'm a self-taught security researcher from **Peshawar, KPK, Pakistan** 🇵🇰 
 ```yaml
 Name:         IB Afridi (Ishaq Afridi)
 Location:     Peshawar, Khyber Pakhtunkhwa, Pakistan 🇵🇰
-Currently:    Building IAPF - 13-Module Pentest Framework
-Learning:     Advanced Nmap Scripting, Burp Suite Pro, R3F, GSAP ScrollTrigger
-Fun Fact:     Built a playable 3D drifting game & shipped it as an Android APK
+Education:    SMIT (Web Dev) | CECOS University (Incoming BS Cyber)
+Currently:    Expanding IAPF v3.0 + Web App Pentesting
+Learning:     Advanced Nmap, Burp Suite, OWASP, React Three Fiber
+Fun Fact:     Built a 3D drifting game & shipped it as an Android APK
 Motto:        "Ethical hacking is not a crime, it's a skill."
-Reach me at:  ib.afridi.cs@gmail.com | ishaqafridi898@gmail.com
+Reach me at:  ib.afridi.cs@gmail.com
 ```
 
-- 🔭 Currently building **IB Afridi Pentest Framework (IAPF)** — a 13-module professional toolkit for Kali Linux
+- 🔭 Currently expanding **IB Afridi Pentest Framework (IAPF)** — a 13-module professional toolkit for Kali Linux
 - 🌱 Deepening expertise in **Python Automation, Nmap, Wireshark, Burp Suite, Three.js & React Three Fiber**
 - 👯 Open to collaborating on **security tools, recon frameworks & 3D web projects**
 - 💬 Ask me about **Pentesting Tools, Recon Automation, Python Scripting, 3D Web Dev**
@@ -204,7 +205,7 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 </div>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/afridi017/afridi017/output/github-contribution-grid-snake-dark.svg" width="100%" />
+  <img src="https://raw.githubusercontent.com/afridi017/afridi017/output/dist/github-contribution-grid-snake-dark.svg" width="100%" />
 </div>
 
 ---
@@ -212,7 +213,6 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
-1. ❗ Opened issue [#1](https://github.com/afridi017/surprise-for-noor/issues/1) in [afridi017/surprise-for-noor](https://github.com/afridi017/surprise-for-noor)
 <!--END_SECTION:activity-->
 
 ---
@@ -220,9 +220,6 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ✍️ Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
-- [MY CV](https://medium.com/@afridi017/my-cv-6332b65e6a7c?source=rss-df683669ccd2------2)
-- [[Boost]](https://dev.to/afridi017/-3f9)
-- [My CV](https://dev.to/afridi017/my-cv-2p0i)
 <!-- BLOG-POST-LIST:END -->
 
 ---
