@@ -2,11 +2,8 @@ name: Update Latest Activity
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "0 */12 * * *" # Har 12 ghante baad
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 permissions:
   contents: write
