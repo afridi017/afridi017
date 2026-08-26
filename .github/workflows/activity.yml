@@ -16,6 +16,51 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: jamesgeorge007/github-activity-readme@master
+
+      - name: Fetch recent activity
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          gh api "users/$OWNER/events/public?per_page=100" | jq -r '
+            [.[] | select(.type == "PushEvent" or .type == "CreateEvent" or .type == "WatchEvent" or .type == "ForkEvent" or .type == "IssuesEvent" or .type == "PullRequestEvent" or .type == "ReleaseEvent")]
+            | .[0:5][]
+            | if .type == "PushEvent" then "🚀 Pushed to [\(.repo.name)](https://github.com/\(.repo.name))"
+              elif .type == "CreateEvent" then "✨ Created [\(.repo.name)](https://github.com/\(.repo.name))"
+              elif .type == "WatchEvent" then "⭐ Starred [\(.repo.name)](https://github.com/\(.repo.name))"
+              elif .type == "ForkEvent" then "🍴 Forked [\(.repo.name)](https://github.com/\(.repo.name))"
+              elif .type == "IssuesEvent" then "❗ Issue in [\(.repo.name)](https://github.com/\(.repo.name))"
+              elif .type == "PullRequestEvent" then "🔀 PR in [\(.repo.name)](https://github.com/\(.repo.name))"
+              elif .type == "ReleaseEvent" then "🏷️ Release in [\(.repo.name)](https://github.com/\(.repo.name))"
+              else empty end' > activity.md
+
+      - name: Insert activity into README
+        run: |
+          python3 - <<'EOF'
+          import re
+          with open("README.md", encoding="utf-8") as f:
+              content = f.read()
+          with open("activity.md", encoding="utf-8") as f:
+              lines = f.read().strip()
+          if not lines:
+              lines = "_No recent public activity yet._"
+          new_content, count = re.subn(
+              r"(<!--START_SECTION:activity-->\n).*?(\n<!--END_SECTION:activity-->)",
+              lambda m: m.group(1) + lines + m.group(2),
+              content,
+              flags=re.DOTALL,
+          )
+          if count == 0:
+              raise SystemExit("Markers missing in README.md!")
+          with open("README.md", "w", encoding="utf-8") as f:
+              f.write(new_content)
+          print("README updated successfully")
+          EOF
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "⚡ Update activity [skip ci]"
+          git push
