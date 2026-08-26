@@ -88,6 +88,11 @@ Dual Mode (CLI + Interactive) Auto Timestamped Reports Multi-threaded Nmap Backe
 
 Stack: Python · Nmap · Sockets · Threading · Kali Linux
 
+### ⚡ Latest Activity
+
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
+
 🔗 View Repo
 
 </td> <td width="50%" valign="top">
