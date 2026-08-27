@@ -1,8 +1,8 @@
-name: Update Latest Activity
+name: Generate Snake
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "0 */12 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -12,55 +12,34 @@ permissions:
   contents: write
 
 jobs:
-  update-readme:
+  generate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch recent activity
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OWNER: ${{ github.repository_owner }}
-        run: |
-          gh api "users/$OWNER/events/public?per_page=100" | jq -r '
-            [.[] | select(.type == "PushEvent" or .type == "CreateEvent" or .type == "WatchEvent" or .type == "ForkEvent" or .type == "IssuesEvent" or .type == "PullRequestEvent" or .type == "ReleaseEvent")]
-            | .[0:5][]
-            | if .type == "PushEvent" then "🚀 Pushed to [\(.repo.name)](https://github.com/\(.repo.name))"
-              elif .type == "CreateEvent" then "✨ Created [\(.repo.name)](https://github.com/\(.repo.name))"
-              elif .type == "WatchEvent" then "⭐ Starred [\(.repo.name)](https://github.com/\(.repo.name))"
-              elif .type == "ForkEvent" then "🍴 Forked [\(.repo.name)](https://github.com/\(.repo.name))"
-              elif .type == "IssuesEvent" then "❗ Issue in [\(.repo.name)](https://github.com/\(.repo.name))"
-              elif .type == "PullRequestEvent" then "🔀 PR in [\(.repo.name)](https://github.com/\(.repo.name))"
-              elif .type == "ReleaseEvent" then "🏷️ Release in [\(.repo.name)](https://github.com/\(.repo.name))"
-              else empty end' > activity.md
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Insert activity into README
+      - name: Slow down snake animation
         run: |
           python3 - <<'EOF'
-          import re
-          with open("README.md", encoding="utf-8") as f:
-              content = f.read()
-          with open("activity.md", encoding="utf-8") as f:
-              lines = f.read().strip()
-          if not lines:
-              lines = "_No recent public activity yet._"
-          new_content, count = re.subn(
-              r"(<!--START_SECTION:activity-->\n).*?(\n<!--END_SECTION:activity-->)",
-              lambda m: m.group(1) + lines + m.group(2),
-              content,
-              flags=re.DOTALL,
-          )
-          if count == 0:
-              raise SystemExit("Markers missing in README.md!")
-          with open("README.md", "w", encoding="utf-8") as f:
-              f.write(new_content)
-          print("README updated successfully")
+          import re, glob
+          FACTOR = 2.0   # 2.0 = half speed | 3.0 = aur slow | 1.5 = thoda slow
+          for path in glob.glob('dist/*.svg'):
+              s = open(path, encoding='utf-8').read()
+              s = re.sub(r'([0-9]*\.?[0-9]+)s\b',
+                         lambda m: f"{float(m.group(1))*FACTOR:.3f}s", s)
+              open(path, 'w', encoding='utf-8').write(s)
+          print("Snake slowed down by factor", FACTOR)
           EOF
 
-      - name: Commit & push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git diff --cached --quiet || git commit -m "⚡ Update activity [skip ci]"
-          git push
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
