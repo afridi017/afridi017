@@ -3,14 +3,14 @@
 </div>
 
 <div align="center">
+  <img src="https://raw.githubusercontent.com/afridi017/afridi017/main/assets/banner.svg" width="100%" />
+</div>
+
+<div align="center">
 
 <img src="https://komarev.com/ghpvc/?username=afridi017&label=Profile%20Views&color=7B2FF7&style=for-the-badge" alt="profile views"/>
 <img src="https://img.shields.io/github/followers/afridi017?label=Followers&style=for-the-badge&color=22D3EE" alt="followers"/>
 
-</div>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/afridi017/afridi017/main/assets/banner.svg" width="100%" />
 </div>
 
 <div align="center">
@@ -202,13 +202,6 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 </div>
 
 <div align="center">
-
-  ### 🏆 GitHub Trophies
-  <img src="https://github-profile-trophy.vercel.app/?username=afridi017&theme=tokyonight&no-frame=true&no-bg=true&column=6&margin-w=12&margin-h=12" />
-
-</div>
-
-<div align="center">
   <img src="https://raw.githubusercontent.com/afridi017/afridi017/output/github-contribution-grid-snake-dark.svg" width="100%" />
 </div>
 
@@ -240,6 +233,9 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
   ### 💬 Open to Work
   **Junior Penetration Tester · SOC Analyst · Security Tool Developer**
 
+  ### ☕ Support My Work
+  [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibafridi)
+
   > "Keep building. Keep growing. Never stop learning." — IB Afridi
 
 </div>
@@ -247,7 +243,7 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ---
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/afridi017/afridi017/main/assets/logo.svg" width="85%" />
+  <img src="https://raw.githubusercontent.com/afridi017/afridi017/main/assets/logo.svg" width="70%" />
 </div>
 
 <div align="center">
