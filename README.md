@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/afridi017/afridi017/main/assets/banner.svg" width="100%" />
+  <img src="https://raw.githubusercontent.com/afridi017/afridi017/main/assets/welcome.svg" width="100%" />
 </div>
 
 <div align="center">
@@ -7,6 +7,10 @@
 <img src="https://komarev.com/ghpvc/?username=afridi017&label=Profile%20Views&color=7B2FF7&style=for-the-badge" alt="profile views"/>
 <img src="https://img.shields.io/github/followers/afridi017?label=Followers&style=for-the-badge&color=22D3EE" alt="followers"/>
 
+</div>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/afridi017/afridi017/main/assets/banner.svg" width="100%" />
 </div>
 
 <div align="center">
@@ -200,7 +204,7 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 <div align="center">
 
   ### 🏆 GitHub Trophies
-  <img src="https://github-profile-trophy.vercel.app/?username=afridi017&theme=tokyonight&no-frame=true&column=7&margin-w=10&margin-h=10&bg_color=0B0F19&title_color=7B2FF7&text_color=D8D8D8" />
+  <img src="https://github-profile-trophy.vercel.app/?username=afridi017&theme=tokyonight&no-frame=true&no-bg=true&column=6&margin-w=12&margin-h=12" />
 
 </div>
 
@@ -213,11 +217,6 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
-🚀 Pushed to [afridi017/smit-web-b6](https://github.com/afridi017/smit-web-b6)
-🚀 Pushed to [afridi017/afridi017](https://github.com/afridi017/afridi017)
-🚀 Pushed to [afridi017/afridi017](https://github.com/afridi017/afridi017)
-✨ Created [afridi017/afridi017](https://github.com/afridi017/afridi017)
-🚀 Pushed to [afridi017/Portfolios](https://github.com/afridi017/Portfolios)
 <!--END_SECTION:activity-->
 
 ---
@@ -225,9 +224,6 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ✍️ Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
-- [MY CV](https://medium.com/@afridi017/my-cv-6332b65e6a7c?source=rss-df683669ccd2------2)
-- [[Boost]](https://dev.to/afridi017/-3f9)
-- [My CV](https://dev.to/afridi017/my-cv-2p0i)
 <!-- BLOG-POST-LIST:END -->
 
 ---
@@ -244,14 +240,15 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
   ### 💬 Open to Work
   **Junior Penetration Tester · SOC Analyst · Security Tool Developer**
 
-  ### ☕ Support My Work
-  [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibafridi)
-
   > "Keep building. Keep growing. Never stop learning." — IB Afridi
 
 </div>
 
 ---
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/afridi017/afridi017/main/assets/logo.svg" width="85%" />
+</div>
 
 <div align="center">
 
