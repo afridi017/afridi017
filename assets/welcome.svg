@@ -1,6 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%">
   <defs>
-    <linearGradient id="wGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="wBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="50%" stop-color="#0B0F19"/>
+      <stop offset="100%" stop-color="#12172b"/>
+    </linearGradient>
+
+    <linearGradient id="wText" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#7B2FF7">
         <animate attributeName="stop-color" values="#7B2FF7;#22D3EE;#7B2FF7" dur="5s" repeatCount="indefinite"/>
       </stop>
@@ -9,84 +15,109 @@
       </stop>
     </linearGradient>
 
-    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="scanFade" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.55"/>
       <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
     </linearGradient>
 
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="5" result="b"/>
+    <filter id="bigGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <clipPath id="typeClip">
-      <rect x="440" y="78" height="34" width="0">
-        <animate attributeName="width" from="0" to="330" dur="2.2s" begin="0.4s" fill="freeze"/>
-      </rect>
-    </clipPath>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
 
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#161b2b" stroke-width="1"/>
+    <pattern id="wGrid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#1a2035" stroke-width="1"/>
     </pattern>
 
     <style>
-      .mono { font-family: 'Courier New', monospace; }
-      .big  { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; }
+      .mono { font-family: 'Courier New', Consolas, monospace; }
+      .lbl  { fill:#22D3EE; }
+      .dim  { fill:#8b949e; }
+      .ok   { fill:#27c93f; }
+      .warn { fill:#ffbd2e; }
     </style>
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="320" fill="#0B0F19"/>
-  <rect width="1200" height="320" fill="url(#grid)"/>
+  <rect width="1200" height="400" fill="url(#wBg)"/>
+  <rect width="1200" height="400" fill="url(#wGrid)"/>
 
-  <!-- Pulsing border -->
-  <rect x="2" y="2" width="1196" height="316" rx="14" fill="none" stroke="#7B2FF7" stroke-width="2">
-    <animate attributeName="stroke-opacity" values="0.35;1;0.35" dur="2.5s" repeatCount="indefinite"/>
+  <!-- Moving scan line -->
+  <rect x="0" y="0" width="1200" height="70" fill="url(#scanFade)" opacity="0.5">
+    <animate attributeName="y" values="-70;400" dur="4s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Scan line -->
-  <rect x="0" y="30" width="1200" height="70" fill="url(#scanGrad)">
-    <animate attributeName="y" values="20;230;20" dur="5s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- HUD corner brackets -->
-  <g stroke="#22D3EE" stroke-width="3" fill="none" stroke-linecap="round">
-    <path d="M 30 50 L 30 26 L 54 26"><animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/></path>
-    <path d="M 1170 50 L 1170 26 L 1146 26"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></path>
-    <path d="M 30 270 L 30 294 L 54 294"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></path>
-    <path d="M 1170 270 L 1170 294 L 1146 294"><animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/></path>
+  <!-- Corner brackets -->
+  <g stroke="#7B2FF7" stroke-width="3" fill="none" opacity="0.9">
+    <path d="M20 60 L20 20 L60 20"/>
+    <path d="M1140 20 L1180 20 L1180 60"/>
+    <path d="M20 340 L20 380 L60 380"/>
+    <path d="M1180 340 L1180 380 L1140 380"/>
   </g>
 
-  <!-- Floating dots -->
-  <circle cx="140" cy="90" r="4" fill="#22D3EE"><animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/></circle>
-  <circle cx="1060" cy="110" r="5" fill="#7B2FF7"><animate attributeName="opacity" values="1;0.2;1" dur="3.5s" repeatCount="indefinite"/></circle>
-  <circle cx="200" cy="250" r="3" fill="#7B2FF7"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/></circle>
-  <circle cx="1000" cy="240" r="4" fill="#22D3EE"><animate attributeName="opacity" values="1;0.3;1" dur="2.8s" repeatCount="indefinite"/></circle>
+  <!-- Ambient dots -->
+  <circle cx="1090" cy="120" r="3" fill="#22D3EE">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1130" cy="300" r="4" fill="#7B2FF7">
+    <animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="120" cy="300" r="3" fill="#7B2FF7">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="3.4s" repeatCount="indefinite"/>
+  </circle>
 
-  <!-- Typing: ssh connect line -->
-  <g clip-path="url(#typeClip)">
-    <text x="440" y="100" class="mono" font-size="18" fill="#27c93f">$ ssh visitor@ib-afridi.profile</text>
+  <!-- Boot sequence lines (staggered, looping) -->
+  <g class="mono" font-size="15">
+    <text x="60" y="80" class="lbl" opacity="0">
+      root@ib-afridi:~$ ./initialize_profile.sh
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.05;0.07;0.85;1" dur="12s" repeatCount="indefinite"/>
+    </text>
+    <text x="60" y="108" class="dim" opacity="0">
+      [*] Loading modules ........................ 13/13
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.10;0.12;0.85;1" dur="12s" repeatCount="indefinite"/>
+    </text>
+    <text x="60" y="136" class="dim" opacity="0">
+      [*] Mounting recon toolkit ................. OK
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.15;0.17;0.85;1" dur="12s" repeatCount="indefinite"/>
+    </text>
+    <text x="60" y="164" class="warn" opacity="0">
+      [!] Firewall bypass ........... AUTHORIZED LAB
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.20;0.22;0.85;1" dur="12s" repeatCount="indefinite"/>
+    </text>
+    <text x="60" y="192" class="ok" opacity="0">
+      [+] Identity verified: IB AFRIDI
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.25;0.27;0.85;1" dur="12s" repeatCount="indefinite"/>
+    </text>
+    <text x="60" y="220" class="ok" opacity="0">
+      [+] ACCESS GRANTED
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.30;0.32;0.85;1" dur="12s" repeatCount="indefinite"/>
+    </text>
   </g>
-  <rect x="775" y="86" width="10" height="16" fill="#27c93f">
-    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
-  </rect>
 
-  <!-- Main WELCOME -->
-  <text x="600" y="185" text-anchor="middle" class="big" font-size="78" fill="url(#wGrad)" filter="url(#glow)" letter-spacing="6">
+  <!-- WELCOME big text -->
+  <text x="600" y="300" text-anchor="middle" font-family="Arial Black, Arial, sans-serif"
+        font-weight="900" font-size="66" fill="url(#wText)" filter="url(#bigGlow)" letter-spacing="6">
     WELCOME
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="2.6s" repeatCount="indefinite"/>
   </text>
 
   <!-- Subtitle -->
-  <text x="600" y="222" text-anchor="middle" class="mono" font-size="17" fill="#8b949e">
-    Assalam-o-Alaikum, Visitor — Scanning profile... 100% Loaded
+  <text x="600" y="338" text-anchor="middle" class="mono" font-size="17" fill="#D8D8D8" filter="url(#softGlow)">
+    TO THE ARSENAL OF IB AFRIDI
   </text>
 
-  <!-- ACCESS GRANTED badge -->
-  <g>
-    <rect x="505" y="248" width="190" height="34" rx="17" fill="none" stroke="#27c93f" stroke-width="1.5">
-      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
-    </rect>
-    <text x="600" y="270" text-anchor="middle" class="mono" font-size="14" fill="#27c93f">✓ ACCESS GRANTED</text>
-  </g>
+  <!-- Bottom tagline with blinking cursor -->
+  <text x="600" y="368" text-anchor="middle" class="mono" font-size="13" fill="#7B2FF7">
+    Cybersecurity Enthusiast · Python Tool Developer · 3D Web Explorer
+    <tspan fill="#22D3EE">
+      _
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </tspan>
+  </text>
 </svg>
