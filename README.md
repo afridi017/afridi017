@@ -213,11 +213,11 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
+🚀 Pushed to [afridi017/smit-web-b6](https://github.com/afridi017/smit-web-b6)
 🚀 Pushed to [afridi017/afridi017](https://github.com/afridi017/afridi017)
 🚀 Pushed to [afridi017/afridi017](https://github.com/afridi017/afridi017)
-🚀 Pushed to [afridi017/afridi017](https://github.com/afridi017/afridi017)
-🚀 Pushed to [afridi017/afridi017](https://github.com/afridi017/afridi017)
-🚀 Pushed to [afridi017/afridi017](https://github.com/afridi017/afridi017)
+✨ Created [afridi017/afridi017](https://github.com/afridi017/afridi017)
+🚀 Pushed to [afridi017/Portfolios](https://github.com/afridi017/Portfolios)
 <!--END_SECTION:activity-->
 
 ---
