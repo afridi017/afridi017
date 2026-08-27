@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: activity
+  cancel-in-progress: true
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
@@ -23,35 +27,45 @@ jobs:
           OWNER: ${{ github.repository_owner }}
         run: |
           gh api "users/$OWNER/events/public?per_page=100" | jq -r '
-            [.[] | select(.type == "PushEvent" or .type == "CreateEvent" or .type == "WatchEvent" or .type == "ForkEvent" or .type == "IssuesEvent" or .type == "PullRequestEvent" or .type == "ReleaseEvent")]
-            | .[0:5][]
+            .[]
+            | select(.type == "PushEvent" or .type == "CreateEvent" or .type == "WatchEvent" or .type == "ForkEvent" or .type == "IssuesEvent" or .type == "PullRequestEvent" or .type == "ReleaseEvent")
+            | select(.repo.name != "afridi017/afridi017")
             | if .type == "PushEvent" then "🚀 Pushed to [\(.repo.name)](https://github.com/\(.repo.name))"
               elif .type == "CreateEvent" then "✨ Created [\(.repo.name)](https://github.com/\(.repo.name))"
               elif .type == "WatchEvent" then "⭐ Starred [\(.repo.name)](https://github.com/\(.repo.name))"
               elif .type == "ForkEvent" then "🍴 Forked [\(.repo.name)](https://github.com/\(.repo.name))"
-              elif .type == "IssuesEvent" then "❗ Issue in [\(.repo.name)](https://github.com/\(.repo.name))"
+              elif .type == "IssuesEvent" then "❗ Opened issue in [\(.repo.name)](https://github.com/\(.repo.name))"
               elif .type == "PullRequestEvent" then "🔀 PR in [\(.repo.name)](https://github.com/\(.repo.name))"
               elif .type == "ReleaseEvent" then "🏷️ Release in [\(.repo.name)](https://github.com/\(.repo.name))"
-              else empty end' > activity.md
+              else empty end' \
+          | awk '!seen[$0]++' \
+          | head -5 > activity.md || true
+          if [ ! -s activity.md ]; then
+            echo "🛠️ Cooking something new... stay tuned!" > activity.md
+          fi
 
       - name: Insert activity into README
         run: |
-          python3 - <<'EOF'
-          import re
+          python3 << 'EOF'
+          import re, sys
           with open("README.md", encoding="utf-8") as f:
               content = f.read()
           with open("activity.md", encoding="utf-8") as f:
               lines = f.read().strip()
           if not lines:
-              lines = "_No recent public activity yet._"
-          new_content, count = re.subn(
-              r"(<!--START_SECTION:activity-->\n).*?(\n<!--END_SECTION:activity-->)",
-              lambda m: m.group(1) + lines + m.group(2),
-              content,
-              flags=re.DOTALL,
-          )
-          if count == 0:
-              raise SystemExit("Markers missing in README.md!")
+              lines = "🛠️ Cooking something new... stay tuned!"
+
+          start = "<!--START_SECTION:activity-->"
+          end = "<!--END_SECTION:activity-->"
+
+          if start not in content or end not in content:
+              print("DEBUG: START marker found ->", start in content)
+              print("DEBUG: END marker found   ->", end in content)
+              sys.exit("Markers missing in README.md!")
+
+          pattern = re.compile(re.escape(start) + r"[\s\S]*?" + re.escape(end))
+          new_content = pattern.sub(start + "\n" + lines + "\n" + end, content, count=1)
+
           with open("README.md", "w", encoding="utf-8") as f:
               f.write(new_content)
           print("README updated successfully")
@@ -61,6 +75,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --quiet origin main || true
           git add README.md
           git diff --cached --quiet || git commit -m "⚡ Update activity [skip ci]"
           git push
