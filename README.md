@@ -238,9 +238,6 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
   ### 💬 Open to Work
   **Junior Penetration Tester · SOC Analyst · Security Tool Developer**
 
-  ### ☕ Support My Work
-  [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibafridi)
-
   > "Keep building. Keep growing. Never stop learning." — IB Afridi
 
 </div>
