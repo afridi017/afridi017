@@ -210,11 +210,11 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
+✨ Created [afridi017/B-Best-Cafe-](https://github.com/afridi017/B-Best-Cafe-)
 🚀 Pushed to [afridi017/B-Best-Cafe-](https://github.com/afridi017/B-Best-Cafe-)
 ✨ Created [afridi017/IB-AFRIDI-VPN-REAL](https://github.com/afridi017/IB-AFRIDI-VPN-REAL)
 🚀 Pushed to [afridi017/smit-web-b6](https://github.com/afridi017/smit-web-b6)
 🚀 Pushed to [afridi017/Portfolios](https://github.com/afridi017/Portfolios)
-✨ Created [afridi017/Portfolios](https://github.com/afridi017/Portfolios)
 <!--END_SECTION:activity-->
 
 ---
