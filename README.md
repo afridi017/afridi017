@@ -210,11 +210,11 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
+✨ Created [afridi017/IB-AFRIDI-VPN-REAL](https://github.com/afridi017/IB-AFRIDI-VPN-REAL)
 🚀 Pushed to [afridi017/smit-web-b6](https://github.com/afridi017/smit-web-b6)
 🚀 Pushed to [afridi017/Portfolios](https://github.com/afridi017/Portfolios)
 ✨ Created [afridi017/Portfolios](https://github.com/afridi017/Portfolios)
 🚀 Pushed to [afridi017/Assignments](https://github.com/afridi017/Assignments)
-🚀 Pushed to [afridi017/for_noor_comfort](https://github.com/afridi017/for_noor_comfort)
 <!--END_SECTION:activity-->
 
 ---
