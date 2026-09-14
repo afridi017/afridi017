@@ -211,9 +211,9 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 
 <!--START_SECTION:activity-->
 🚀 Pushed to [afridi017/omni-projects](https://github.com/afridi017/omni-projects)
+🚀 Pushed to [afridi017/noor-apology](https://github.com/afridi017/noor-apology)
 ✨ Created [afridi017/noor-apology](https://github.com/afridi017/noor-apology)
 ✨ Created [afridi017/omni-projects](https://github.com/afridi017/omni-projects)
-🚀 Pushed to [afridi017/noor-apology](https://github.com/afridi017/noor-apology)
 ✨ Created [afridi017/B-Best-Cafe-](https://github.com/afridi017/B-Best-Cafe-)
 <!--END_SECTION:activity-->
 
