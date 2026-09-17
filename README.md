@@ -210,9 +210,9 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
+🚀 Pushed to [afridi017/noor-apology](https://github.com/afridi017/noor-apology)
 🚀 Pushed to [afridi017/omni-projects](https://github.com/afridi017/omni-projects)
 🚀 Pushed to [afridi017/smit-web-b6](https://github.com/afridi017/smit-web-b6)
-🚀 Pushed to [afridi017/noor-apology](https://github.com/afridi017/noor-apology)
 ✨ Created [afridi017/noor-apology](https://github.com/afridi017/noor-apology)
 ✨ Created [afridi017/omni-projects](https://github.com/afridi017/omni-projects)
 <!--END_SECTION:activity-->
