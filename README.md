@@ -210,11 +210,11 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
+🚀 Pushed to [afridi017/late_birthday_surprise](https://github.com/afridi017/late_birthday_surprise)
 🚀 Pushed to [afridi017/surprise-for-noor](https://github.com/afridi017/surprise-for-noor)
 🚀 Pushed to [afridi017/noor-apology](https://github.com/afridi017/noor-apology)
 🚀 Pushed to [afridi017/ib-afridi-portfolio](https://github.com/afridi017/ib-afridi-portfolio)
 🚀 Pushed to [afridi017/Assignments](https://github.com/afridi017/Assignments)
-🚀 Pushed to [afridi017/omni-projects](https://github.com/afridi017/omni-projects)
 <!--END_SECTION:activity-->
 
 ---
