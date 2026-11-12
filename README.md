@@ -213,7 +213,6 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 🚀 Pushed to [afridi017/Assignments](https://github.com/afridi017/Assignments)
 🚀 Pushed to [afridi017/omni-projects](https://github.com/afridi017/omni-projects)
 🚀 Pushed to [afridi017/Portfolios](https://github.com/afridi017/Portfolios)
-🚀 Pushed to [afridi017/ib-afridi-portfolio](https://github.com/afridi017/ib-afridi-portfolio)
 <!--END_SECTION:activity-->
 
 ---
