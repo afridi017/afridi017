@@ -210,6 +210,7 @@ Professional portfolio with Three.js 3D background, GSAP scroll animations, dark
 ### ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
+⭐ Starred [elevenlabs/showcase](https://github.com/elevenlabs/showcase)
 🚀 Pushed to [afridi017/Assignments](https://github.com/afridi017/Assignments)
 <!--END_SECTION:activity-->
 
